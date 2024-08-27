@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <script defer src="script.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.png"
+            alt="Logo de Alura" class="logo">
+    </header>
+    <main>
+        <div class="main-container">
+            <div class="left-container">
+                <textarea id="inputText" placeholder="Ingrese el texto aquí" class="transparent-input"></textarea>
+                <div class="alert">
+                    <img src="images/alert-icon.png" alt="icono de alerta">
+                    <span class="caution">Solo letras minúsculas y sin acentos.</span>
+                </div>
+                <div class="options">
+                    <button id="encryptButton" onclick="encryptText()">Encriptar</button>
+                    <button onclick="decryptText()">Desencriptar</button>
+                </div>
+            </div>
+            <div class="right-container">
+                <div id="outputContainer" class="output-container">
+                    <div class="muñeco-container hidden" id="muñecoContainer">
+                        <img src="images/pic1.png"
+                            alt="Ilustración de persona sosteniendo una lupa frente a su rostro." class="muñeco">
+                    </div>
+                    <div class="muñeco-container" id="muñecoContainer">
+                        <textarea id="outputText" placeholder="Ningún mensaje fue encontrado" readonly
+                        class="transparent-output"></textarea>
+                    </div>
+                    <div class="output" id="copyButtonContainer">
+                        <button id="copyButton" onclick="copyText()">Copiar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal Structure -->
+    <div id="messageModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modalMessage"></p>
+        </div>
+    </div>
+</body>
+
+</html>
